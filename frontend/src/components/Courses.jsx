@@ -165,25 +165,11 @@ function Courses() {
                   key={course._id}
                   className="border border-gray-200 rounded-lg p-4 shadow-sm"
                 >
-                  {/* <img
+                  <img
                      src={course.image?.url ?? "/fallback-image.jpg"}
                      alt={course.title || "Course image"}
                      className="rounded mb-4"
-                  /> */}
-
-                  {course?.image?.url ? (
-  <img
-    src={course.image.url}
-    alt={course.title || "Course image"}
-    className="rounded mb-4"
-  />
-) : (
-  <div className="rounded mb-4 w-[300px] h-[200px] flex items-center justify-center bg-gray-200 text-gray-600">
-    No image provided
-  </div>
-)}
-
-
+                  />
                   <h2 className="font-bold text-lg mb-2">{course.title}</h2>
                   <p className="text-gray-600 mb-4">
                     {course.description.length > 100
